@@ -16,16 +16,6 @@ func ExamplePrinter() {
 	// msg 10
 }
 
-func ExamplePrinter_context() {
-	c := log.NewContext(&exampleLogger{}).With("key","val")
-	NewPrinter(c, "msg").Print("test")
-	c = c.WithPrefix("prefixKey", "prefixVal")
-	NewPrinter(c, "msg").Printf("%d", 10)
-	// Output:
-	// key val msg test
-	// prefixKey prefixVal key val msg 10
-}
-
 type exampleLogger struct {}
 
 func (l *exampleLogger) Log(keyvals ...interface{}) error {
