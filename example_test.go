@@ -16,7 +16,7 @@ func ExamplePrinter() {
 	// msg 10
 }
 
-func ExamplePrinterContext() {
+func ExamplePrinter_Context() {
 	c := log.NewContext(&exampleLogger{}).With("key","val")
 	NewPrinter(c, "msg").Print("test")
 	c = c.WithPrefix("prefixKey", "prefixVal")
