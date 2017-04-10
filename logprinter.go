@@ -1,8 +1,8 @@
 package logprinter
 
 import (
-	"github.com/go-kit/kit/log"
 	"fmt"
+	"github.com/go-kit/kit/log"
 )
 
 type Printer struct {
